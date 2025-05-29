@@ -14,8 +14,8 @@ from types import SimpleNamespace
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 ADMIN_CHAT_ID = int(os.getenv("ADMIN_CHAT_ID"))
-MAX_NEW_TOKENS = int(os.getenv("MAX_NEW_TOKENS"))
-SHORT_NEW_TOKENS = int(os.getenv("SHORT_NEW_TOKENS"))
+MAX_NEW_TOKENS = int(os.getenv("MAX_NEW_TOKENS", 512))
+SHORT_NEW_TOKENS = int(os.getenv("SHORT_NEW_TOKENS", 250))
 
 logging.basicConfig(level=logging.INFO)
 bot = Bot(token=BOT_TOKEN)
